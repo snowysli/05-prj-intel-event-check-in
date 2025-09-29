@@ -1,3 +1,47 @@
+/* Attendee list styles */
+.attendee-list-section {
+  margin-top: 32px;
+  padding-top: 18px;
+  border-top: 2px solid #f1f5f9;
+  text-align: left;
+}
+
+.attendee-list-section h3 {
+  color: #64748b;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.attendee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.attendee-list li {
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 12px 18px;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 60, 116, 0.04);
+}
+
+.attendee-list .attendee-name {
+  font-weight: 600;
+  color: #0071c5;
+}
+
+.attendee-list .attendee-team {
+  font-weight: 500;
+  color: #475569;
+  font-size: 15px;
+  padding-left: 8px;
+}
 /* Modern reset */
 * {
   margin: 0;
@@ -230,7 +274,26 @@ button .fas {
   background-color: #0071c5;
   background-image: linear-gradient(90deg, #0071c5, #00aeef);
   border-radius: 10px;
-  transition: width 0.6s ease;
+  transition: width 0.6s ease, background 0.6s ease;
+}
+
+.progress-bar.full {
+  animation: pulse-bar 0.7s infinite alternate;
+  background-color: #ffd700;
+  background-image: linear-gradient(90deg, #ffd700, #ff9800);
+}
+
+.progress-bar.full {
+  animation: pulse-bar 0.7s infinite alternate;
+}
+
+@keyframes pulse-bar {
+  0% {
+    box-shadow: 0 0 0 0 #00aeef99;
+  }
+  100% {
+    box-shadow: 0 0 32px 18px #00aeefcc, 0 0 12px 6px #00c7fd99;
+  }
 }
 
 /* Adjust spacing between components */
